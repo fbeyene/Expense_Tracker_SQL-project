@@ -1,30 +1,23 @@
-# Expense Tracker – SQL-Based Financial Reporting System
+# Expense Tracker – SQL Project
 
 ## 📌 Project Overview
-The **Expense Tracker SQL Project** is a relational database–driven financial tracking and reporting system designed to capture, manage, and analyze expense data for one or more users.
+The Expense Tracker SQL project is a relational database–driven solution designed to track personal or household expenses, categorize spending, and generate meaningful financial insights. The project demonstrates strong SQL development skills, including database design, ETL-style data preparation, reporting views, stored procedures, and advanced analytical queries.
 
-This project is intentionally **SQL-centric** and demonstrates enterprise-level database development practices commonly used in financial systems, data warehouses, and reporting platforms.
-
----
-
-## 🎯 Project Objectives
-- Design a normalized relational database model
-- Implement full CRUD functionality using stored procedures
-- Build reporting-ready SQL views
-- Optimize query performance with indexing strategies
-- Demonstrate advanced SQL concepts (CTEs, window functions, aggregations)
-- Prepare a backend suitable for Power BI, SSRS, or Excel reporting
+This project is intended for portfolio demonstration and analytics reporting use cases.
 
 ---
 
-## 🧱 Technology Stack
-- **Database:** Microsoft SQL Server (Developer Edition)
-- **Query Tool:** SQL Server Management Studio (SSMS)
-- **Version Control:** Git & GitHub
-- **Reporting & Visualization:** Power BI (planned / implemented separately)
-- **IDE:** PyCharm (project organization & version control)
+## 🛠 Technologies Used
+- Microsoft SQL Server
+- T-SQL
+- SQL Server Management Studio (SSMS)
+- Git & GitHub
+- (Planned) Power BI for reporting and visualization
 
 ---
+
+## 🗂 Project Structure
+
 
 ```text
 Expense_Tracker_SQL/
@@ -43,84 +36,71 @@ Expense_Tracker_SQL/
 
 ---
 
-## 🗄️ Data Model Overview
-
-### Core Tables
-- **Users** – Stores system users
-- **Categories** – Expense categories (Rent, Groceries, Utilities, etc.)
-- **PaymentMethods** – Cash, Credit Card, Debit Card, Bank Transfer
-- **Expenses** – Fact table containing expense transactions
-
-### Relationships
-- One User → Many Expenses  
-- One Category → Many Expenses  
-- One Payment Method → Many Expenses  
-
-This design follows **3rd Normal Form (3NF)** principles.
 
 ---
 
-## 🔄 CRUD Operations (Stored Procedures)
-The system implements full CRUD functionality using parameterized stored procedures:
+## 🧱 Database Design
+The database follows a normalized relational design and includes:
 
-- `sp_AddExpense` – Insert new expense records
-- `sp_GetExpensesByUser` – Retrieve expenses by user
-- `sp_UpdateExpense` – Update existing expense records
-- `sp_DeleteExpense` – Delete expense records
-- `sp_GetMonthlySummary` – Monthly expense aggregation per user
+- **Users** – Stores user-level information
+- **Categories** – Expense classification (e.g., Rent, Utilities, Food)
+- **Expenses** – Individual expense transactions
+- **Payment Methods** – Cash, Credit Card, Debit, etc.
 
-These procedures reflect how applications securely interact with databases in production environments.
-
----
-
-## 📊 Reporting Views
-To support analytics and BI tools, the following SQL views are created:
-
-- **vw_ExpenseDetails** – Fully joined, human-readable expense data
-- **vw_MonthlyExpenseSummary** – Monthly totals by user
-- **vw_ExpenseByCategory** – Category-level spending totals
-- **vw_ExpenseByPaymentMethod** – Spend and transaction count by payment method
-- **vw_UserSpendingRank** – User ranking by total spending
-
-These views are designed for **direct consumption by Power BI or SSRS**.
+Primary and foreign keys enforce referential integrity, and indexing is applied to optimize query performance.
 
 ---
 
-## ⚡ Performance Optimization
-Performance tuning techniques applied include:
-- Nonclustered indexes on foreign key columns
-- Indexing on date columns for time-based reporting
-- Composite index on `(UserID, ExpenseDate)` with included columns
-- Validation using `SET STATISTICS IO` and `SET STATISTICS TIME`
+## 📊 Views
+The project includes reporting views such as:
+- Expense detail view with category and user context
+- Aggregated summaries for monthly and category-based reporting
+
+These views are designed to support analytics tools such as Power BI.
+
+---
+
+## ⚙ Stored Procedures
+Key stored procedures include:
+- Retrieving expenses by user
+- Monthly expense summaries
+- Category-based spending analysis
+
+Stored procedures encapsulate business logic and promote reusability.
 
 ---
 
 ## 📈 Advanced Reporting Queries
-Advanced SQL reporting includes:
-- Monthly spending trends
-- Category and payment method analysis
-- Running totals using window functions
-- Month-over-month variance calculations
-- High-value transaction detection for audit and control purposes
+Advanced queries demonstrate:
+- Monthly expense trends
+- Category spending percentages
+- High-spend detection
+- Query optimization using indexing and aggregation techniques
 
-These queries reflect real-world finance and operational reporting needs.
+---
+
+## ▶ How to Run the Project
+1. Open SQL Server Management Studio (SSMS)
+2. Execute scripts in order:
+   - `01_create_database.sql`
+   - `02_create_tables.sql`
+   - `03_seed_data.sql`
+   - `04_views.sql`
+   - `05_stored_procedures.sql`
+   - `06_indexes.sql`
+   - `07_advanced_reporting.sql`
+3. Review results using SELECT queries or reporting views
 
 ---
 
 ## 🚀 Future Enhancements
-- Power BI dashboards and interactive visuals
-- Row-level security
-- Budget thresholds and alerts
+- Power BI dashboards and visual reports
 - Parameterized reporting procedures
-- Application or API integration
+- User authentication and role-based access
+- Budget tracking and alerts
 
 ---
 
-## 👤 Author
+## 📌 Author
 **Fikadu Beyene**  
 Data & Financial Systems Professional  
-
----
-
-## 📄 License
-This project is intended for educational and portfolio demonstration purposes.
