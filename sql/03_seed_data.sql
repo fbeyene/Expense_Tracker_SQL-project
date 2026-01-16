@@ -1,3 +1,11 @@
+/*
+Author: Fikadu Beyene
+Purpose: Create core expense tracking tables
+Last Updated: 2025-12
+*/
+
+
+
 USE Expense_Tracker;
 GO
 

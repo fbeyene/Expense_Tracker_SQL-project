@@ -1,9 +1,8 @@
 # Expense Tracker – SQL Project
 
 ## 📌 Project Overview
-The Expense Tracker SQL project is a relational database–driven solution designed to track personal or household expenses, categorize spending, and generate meaningful financial insights. The project demonstrates strong SQL development skills, including database design, ETL-style data preparation, reporting views, stored procedures, and advanced analytical queries.
+The Expense Tracker - SQL Project is a data-driven solution to manage, analyze, and visualize personal or organizational expenses. It captures expense transactions, categorizes them, and provides advanced reporting through SQL views, stored procedures, and Power BI dashboards. The project emphasizes best practices in data modeling, performance optimization, and interactive visualization.
 
-This project is intended for portfolio demonstration and analytics reporting use cases.
 
 ---
 
@@ -12,7 +11,7 @@ This project is intended for portfolio demonstration and analytics reporting use
 - T-SQL
 - SQL Server Management Studio (SSMS)
 - Git & GitHub
-- (Planned) Power BI for reporting and visualization
+- Power BI for reporting and visualization
 
 ---
 
